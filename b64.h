@@ -24,12 +24,12 @@
 #define B64_BUFFER_SIZE		(1024 * 64) // 64K
 
  // Start buffered memory
-char* b64_buf_malloc();
+void* b64_buf_malloc(void);
 
 // Update memory size. Returns the same pointer if we
 // have enough space in the buffer. Otherwise, we add
 // additional buffers.
-char* b64_buf_realloc(unsigned char* ptr, size_t size);
+void* b64_buf_realloc(void* ptr, size_t size);
 
 /**
  * Base64 index table.
